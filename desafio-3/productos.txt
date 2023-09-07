@@ -1,0 +1,4 @@
+[
+    {"title":"Libro","description":"Novela romantica","price":4800,"thumbnail":"https://global-uploads.webflow.com/6034d7d1f3e0f52c50b2adee/625453f3986326e6a6ff7a9d_6034d7d1f3e0f54abdb2b276_Jane-eyre-charlotte-bronte-editorial-alma.jpeg","stock":500,"code":"AV58","id":1},
+{"title":"Libro","description":"Historia","price":1800,"thumbnail":"https://global-uploads.webflow.com/6034d7d1f3e0f52c50b2adee/625453f3986326e6a6ff7a9d_6034d7d1f3e0f54abdb2b276_Jane-eyre-charlotte-bronte-editorial-alma.jpeg","stock":87,"code":"AC02","id":2}
+]
