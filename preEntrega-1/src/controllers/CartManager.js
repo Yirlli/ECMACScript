@@ -49,10 +49,10 @@ class CartManager{
             return "id no encontrado"
         }
         let carritoList = await this.readShoppingCart()
-        let carritoFiltro = carritoList.filter(prod => prod.id != id )
+        let carritoFiltro = carritoList.filter(carrito => carrito.id != cartId )
         if(carritoById.products.some(prod=>prod.id === productId)){
             let productInCart = carritoById.products.find(prod=>prod.id === productId)
-            productInCart.cantidad ++
+            productInCart.cantidad +1
             let cartsConcat = [productInCart, ...carritoFiltro]
             await this.writeShoppingCart(carritoConcat) 
             return "Se añadio otro producto al carrito de compras"
