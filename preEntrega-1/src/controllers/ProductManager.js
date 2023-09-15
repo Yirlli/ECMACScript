@@ -28,13 +28,16 @@ class ProductManager{
     }
 
     getProductById = async (id) =>{
-        let productList= await this.readProduct()
-    
-        let productById = productList.find(p => p.id === id)
+        let productById = await this.exist(id)
         if(!productById){
             return "id no encontrado"
         } 
         return productById
+    }
+
+    exist = async(id)=>{
+        let products= await this.readProduct()
+        return products.find(prod => prod.id === id )
     }
 
     deleteProducts = async  (id) =>{
@@ -49,7 +52,12 @@ class ProductManager{
     }
 
     updateProduct= async(id,product)=>{
-        
+        let productById = await this.exist(id)
+        if(!productById) return "Producto no encontrado"
+        await this.deleteProducts(id)
+        let productOld = await this.readProduct()
+        let products = [{...product, id : id}, ... productOld]
+        await this.writeProducts(products)
     }
 }
 
