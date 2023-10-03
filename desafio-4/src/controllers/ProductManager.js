@@ -58,6 +58,7 @@ class ProductManager{
         let productOld = await this.readProduct()
         let products = [{...product, id : id}, ... productOld]
         await this.writeProducts(products)
+        return "Producto actualizado"
     }
 }
 

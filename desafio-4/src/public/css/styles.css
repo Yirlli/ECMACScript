@@ -1,0 +1,35 @@
+body{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    padding: 2rem;
+}
+.container{
+    margin-left: 20vw;
+    width: 50vw;
+    border-color: black;
+    border-radius: 2rem;
+    background-color: antiquewhite;
+    justify-content: center;
+    padding: 2rem;
+    align-content: center;
+
+
+}
+
+.username{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.chat{
+    border-color: black;
+    box-sizing: border-box;
+}
+.conn{text-align: center;}
+

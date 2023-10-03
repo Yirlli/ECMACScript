@@ -1,25 +1,26 @@
-import {Router} from "express"
+import { Router } from "express";
 import CartManager from "../controllers/CartManager.js";
 
-const ShoppingCartRuta = Router()
-const carrito = new CartManager()
+const CartRouter = Router()
+const carts = new CartManager
 
-ShoppingCartRuta.post("/", async(req, res)=>{
-    res.send(await carrito.addCart())
+CartRouter.post("/", async(req,res) => {
+    res.send(await carts.addCarts())
 })
 
-ShoppingCartRuta.get("/", async(req, res)=>{
-    res.send(await carrito.readShoppingCart())
+CartRouter.get(`/`, async (req, res) =>{
+    res.send(await carts.readCarts())
 })
 
-ShoppingCartRuta.get("/:id", async(req, res)=>{
-    res.send(await carrito.getCarritoById(req.params.id))
+CartRouter.get(`/:id`, async (req, res) =>{
+    let id = parseInt(req.params.id)
+    res.send(await carts.getCartsById(id))
 })
 
-ShoppingCartRuta.post("/:cid/products/:pid", async(req,res)=>{
-    let cartId = req.params.cid
-    let productId= req.params.pid
-    res.send(await carrito.addProductInCart(cartId, productId))
+CartRouter.post(`/:cid/products/:pid`, async (req, res) => {
+    let cartId = parseInt(req.params.cid)
+    let productId = parseInt(req.params.pid)
+    res.send(await carts.addProductInCart(cartId, productId))
 })
 
-export default ShoppingCartRuta
+export default CartRouter
