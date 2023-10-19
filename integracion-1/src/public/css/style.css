@@ -1,0 +1,21 @@
+
+body{
+    background-color: bisque;
+}
+#username-form{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+#username-form h1{
+    text-align: center;
+}
+
+.container-chat{
+    gap:2rem;
+    display: flex;
+    justify-content: center;
+    max-width: 60vw;
+}

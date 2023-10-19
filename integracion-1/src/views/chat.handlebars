@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body> 
+    <div class="container-chat">
+        <div id="username-form">
+        <h1>Chat con Mongoose</h1>
+        <form id="username-form" action="/api/msg" method="POST">
+            <input type="text" id="username" placeholder="Ingrese nombre de usuario" name="user" required>
+            <textarea type="text" id="message" placeholder="Ingrese su mensaje" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="/js/chat.js"></script>
+
+    </div>
+    
+</body>
+</html>
